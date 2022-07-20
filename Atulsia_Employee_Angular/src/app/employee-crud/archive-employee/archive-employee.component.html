@@ -1,0 +1,28 @@
+<h2>Employee All</h2>           
+<table border="1">
+    <tr>
+        <th>Employee Id</th>
+        <th>Name</th>
+        <th>contact</th>
+        <th>Email</th>
+        <th>Address</th>
+        <th>employeeStatus</th>
+        <th>archiveStatus</th>
+
+        <th colspan="3" style="text-align:center ;">Action</th>
+    </tr>
+    <tr *ngFor="let employee of allEmployees">
+        <td>{{employee.employeeId}}</td>
+        <td>{{employee.employeeName}}</td>
+        <td>{{employee.contactNumber}}</td>
+        <td>{{employee.email}}</td>
+        <td>{{employee.address}}</td>
+        <td>{{employee.archiveStatus}}</td>
+        <td>{{employee.archiveStatus}}</td>
+        <td style="text-align:center ;"><button (click)="unArchiveEmployee(employee.employeeId)">Un-Archive</button></td>
+    </tr>
+</table>
+ <!-- <div [hidden]="!submitted">
+    <p>Employee details updated successfully!!</p> -->
+    <button (click)="goToHome()">Back To Home</button>
+<!-- </div>  -->

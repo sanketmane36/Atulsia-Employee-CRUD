@@ -1,0 +1,30 @@
+<h2>Employee All</h2>           <button (click)="addEmployee()">Add Employee</button>  <button (click)="getArchiveEmployee()">Archive Employee</button>
+<table border="1">
+    <tr>
+        <th>Employee Id</th>
+        <th>Name</th>
+        <th>contact</th>
+        <th>Email</th>
+        <th>Address</th>
+        <th>employeeStatus</th>
+        <th>archiveStatus</th>
+        <th colspan="3" style="text-align:center ;">Action</th>
+    </tr>
+    <tr *ngFor="let employee of allEmployees">
+        <td>{{employee.employeeId}}</td>
+        <td>{{employee.employeeName}}</td>
+        <td>{{employee.contactNumber}}</td>
+        <td>{{employee.email}}</td>
+        <td>{{employee.address}}</td>
+        <td>{{employee.employeeStatus}}</td>
+        <td>{{employee.archiveStatus}}</td>
+        <td style="text-align:center ;"><button (click)="deleteEmployee(employee.employeeId)">Delete</button></td>
+        <td style="text-align:center ;"><button (click)="updateEmployee(employee.employeeId)">Update</button></td>
+        <td style="text-align:center ;"><button (click)="employeeDetails(employee.employeeId)">Details</button></td>
+        <td style="text-align:center ;"><button (click)="archiveEmployee(employee.employeeId)">Archive</button></td>
+    </tr>
+</table>
+<!-- <div [hidden]="!submitted">
+    <p>Employee details updated successfully!!</p>
+    <button (click)="goToHome()">Back To Home</button>
+</div> -->

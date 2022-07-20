@@ -1,0 +1,23 @@
+<p>add-employee works!</p>
+<h2>Add New Employee</h2>
+<div [hidden]="submitted">
+    <form>
+        
+        <label>Employee Name : </label>
+        <input type="text" name="employeeName" [(ngModel)]="employee.employeeName"><br>
+        <label>Contact Number : </label>
+        <input type="text" name="contactNumber" [(ngModel)]="employee.contactNumber"><br>
+        <label>Email : </label>
+        <input type="text" name="email" [(ngModel)]="employee.email"><br>
+        <label>Address : </label>
+        <input type="text" name="address" [(ngModel)]="employee.address"><br>
+        <!-- <label>Employee Status : </label>
+        <input type="text" name="employeeStatus" [(ngModel)]="employee.employeeStatus"><br> -->
+        <input type="submit" value="Add Employee" (click)="onAddEmployee()">
+    </form>
+</div>
+<div [hidden]="!submitted">
+    <p>Employee details added successfully!!</p>
+    <button (click)="goToHome()">Back To Home</button>
+    <button (click)="addMOre()">Add More</button>
+</div>
